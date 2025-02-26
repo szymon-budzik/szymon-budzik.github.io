@@ -89,7 +89,7 @@
 
 <body>
     <div class="container">
-        <h1>Blackjack</h1>
+        <h1>Blackjack1</h1>
         <p id="message">Podaj swój zakład i kliknij "Deal" aby zacząć grę!</p>
 
         <div class="bet-input">
