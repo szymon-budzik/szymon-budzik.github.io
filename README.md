@@ -12,11 +12,14 @@
             background-color: rgb(49, 1, 1);
             color: white;
             font-weight: bold;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
             margin: 20px auto;
-            max-width: 600px;
+            max-width: 90%;
+            width: 600px;
             padding: 20px;
             background-color: #35654d;
             border-radius: 10px;
@@ -24,13 +27,14 @@
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 16px;
             margin: 5px;
             font-size: 16px;
             background-color: #FFD700;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: 0.3s ease-in-out;
         }
 
         button:hover {
@@ -40,6 +44,7 @@
         .cards {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
             margin: 10px 0;
         }
@@ -59,6 +64,25 @@
 
         .bet-input {
             margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px;
+                font-size: 18px;
+            }
+
+            .card {
+                width: 50px;
+                height: 70px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
