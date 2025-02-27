@@ -10,119 +10,81 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
         .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f4f4f4;
-    }
-
-    .pprofile-card {
-        display: flex;
-        background: #fff;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        max-width: 900px;
-        width: 80%;
-        font-size: 1.2rem;
-    }
-
-    .pprofile-info {
-        flex: 2;
-        text-align: center;
-        padding-right: 20px;
-        border-right: 1px solid #ddd;
-    }
-
-    .pprofile-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
-
-    .role {
-        font-size: 14px;
-        color: #666;
-    }
-
-    .description {
-        font-size: 12px;
-        color: #888;
-        margin: 10px 0;
-    }
-
-    .stats {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 15px;
-    }
-
-    .stats div {
-        text-align: center;
-    }
-
-    .stats h3 {
-        margin: 0;
-        font-size: 22px;
-        color: #333;
-    }
-
-    .stats p {
-        font-size: 14px;
-        color: #777;
-    }
-
-    .pprofile-summary {
-        flex: 1;
-        padding-left: 20px;
-        text-align: center;
-    }
-
-    .pprofile-summary h3 {
-        font-size: 16px;
-        color: #333;
-    }
-
-    .summary-text {
-        font-size: 12px;
-        color: #777;
-        margin-bottom: 10px;
-    }
-
-    .summary-box {
-        padding: 10px;
-        border-radius: 8px;
-        margin: 10px 0;
-        color: #fff;
-    }
-
-    .blue {
-        background: linear-gradient(135deg, #1E3A8A, #3B82F6);
-    }
-
-    .orange {
-        background: linear-gradient(135deg, #FF8C00, #FF4500);
-    }
-
-    .social-icons {
-        margin-top: 10px;
-    }
-
-    .social-icons i {
-        margin: 5px;
-        font-size: 18px;
-        color: #555;
-        cursor: pointer;
-        transition: color 0.3s;
-    }
-
-    .social-icons i:hover {
-        color: #333;
-    }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            min-height: 100vh;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .pprofile-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        .pprofile-info, .pprofile-summary {
+            text-align: center;
+        }
+        .pprofile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stats div {
+            margin-bottom: 10px;
+        }
+        .summary-box {
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            color: #fff;
+        }
+        .blue {
+            background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+        }
+        .orange {
+            background: linear-gradient(135deg, #FF8C00, #FF4500);
+        }
+        @media (min-width: 768px) {
+            .pprofile-card {
+                flex-direction: row;
+                align-items: center;
+            }
+            .pprofile-info {
+                flex: 2;
+                border-right: 1px solid #ddd;
+                padding-right: 20px;
+            }
+            .pprofile-summary {
+                flex: 1;
+                padding-left: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 
