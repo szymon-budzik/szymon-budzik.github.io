@@ -310,7 +310,7 @@
             playerTotalSpan.textContent = playerTotal;
 
             if (playerTotal > 21) {
-                messageParagraph.textContent = 'Krupier wygrywa';
+                setMessage('Krupier wygrywa!', 'rgba(255, 0, 0, 0.5)');
                 endGame();
                 return;
             }
